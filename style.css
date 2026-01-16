@@ -1,12 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Inter", sans-serif;
 }
 
 body {
   background-color: #1e1e1e;
   height: 2000px;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
 }
 
 header {
@@ -20,7 +27,45 @@ header {
   padding: 40px 17.75px;
 
   div.logos {
+    .main_logo {
+      display: flex;
+      justify-content: center;
+      cursor: pointer;
+    }
+    .search_box {
+      width: 52.5px;
+      height: 52.5px;
+      background-color: #333333;
+      border-radius: 8px;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 44.47px 0 32px 0;
+    }
+    nav {
+      align-items: center;
+      gap: 32px;
+      margin-bottom: 251px;
+    }
+    div.additional_settings {
+      align-items: center;
+      gap: 32px;
+    }
   }
   div.texts {
+    h1 {
+      color: white;
+      font-size: 24px;
+      font-weight: 600;
+    }
+    input {
+      margin: 44.47px 0 32px -25px;
+      width: 223.5px;
+      height: 52.5px;
+      background-color: #333333;
+      border: none;
+      outline: none;
+    }
   }
 }
