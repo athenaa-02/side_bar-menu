@@ -24,7 +24,7 @@ header {
   height: 100%;
   display: flex;
   gap: 20px;
-  padding: 40px 17.75px;
+  padding: 40px 0 40px 17.75px;
 
   div.logos {
     .main_logo {
@@ -46,14 +46,27 @@ header {
     nav {
       align-items: center;
       gap: 32px;
-      margin-bottom: 251px;
+      margin-bottom: 200px;
     }
     div.additional_settings {
       align-items: center;
       gap: 32px;
+
+      .avatar_logo {
+        margin-top: 20px;
+      }
     }
   }
   div.texts {
+    max-width: 0;
+    opacity: 0;
+    transition: max-width 300ms ease, opacity 500ms linear;
+    a {
+      font-size: 16px;
+      color: #9e9e9e;
+      text-decoration: none;
+      font-weight: 600;
+    }
     h1 {
       color: white;
       font-size: 24px;
@@ -66,6 +79,47 @@ header {
       background-color: #333333;
       border: none;
       outline: none;
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px;
+      caret-color: #9e9e9e;
+    }
+    input::placeholder {
+      color: #9e9e9e;
+      font-size: 16px;
+    }
+
+    div.navigation {
+      gap: 37px;
+    }
+    .additional_settings_texts {
+      gap: 37px;
+      margin-top: 202px;
+
+      .user {
+        height: 89px;
+        background-color: #333333;
+        justify-content: center;
+
+        p.username {
+          color: white;
+          font-size: 16px;
+          font-weight: 600;
+          margin-bottom: 8px;
+        }
+        span.mail {
+          color: #808080;
+          font-size: 12px;
+        }
+      }
     }
   }
+}
+
+header:hover div.texts {
+  max-width: 198.5px;
+  opacity: 1;
+}
+
+header:hover {
+  padding-right: 17.75px;
 }
