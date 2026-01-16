@@ -52,9 +52,9 @@ header {
       align-items: center;
       gap: 32px;
 
-      .avatar_logo {
+      /* .avatar_logo {
         margin-top: 20px;
-      }
+      } */
     }
   }
   div.texts {
@@ -92,13 +92,17 @@ header {
       gap: 37px;
     }
     .additional_settings_texts {
-      gap: 37px;
+      gap: 37.8px;
       margin-top: 202px;
 
       .user {
         height: 89px;
         background-color: #333333;
         justify-content: center;
+        margin-left: -26px;
+        padding-left: 16px;
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
 
         p.username {
           color: white;
@@ -122,4 +126,17 @@ header:hover div.texts {
 
 header:hover {
   padding-right: 17.75px;
+}
+.avatar_logo {
+  height: 89px;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  width: 50px;
+  padding-left: 5px;
+  transition: all 500ms linear;
+}
+
+header:hover .avatar_logo {
+  background-color: #333333;
 }
